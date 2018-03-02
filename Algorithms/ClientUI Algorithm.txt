@@ -1,0 +1,20 @@
+algorithm ClientUI
+input:	QuotaRequests
+output:	Give details about current Quota and allocate the quota requested by user on admin's approval
+
+Step 1:	Start
+Step 2:	Start this application as startup and minimized to tray
+Step 3:	Place buttons for QuotaLeft and to SendQuotaRequests in design view
+Step 4:	Define what happens when CheckQuota is clicked
+		if file exists then
+			read quota from file and display it to user
+		else display unable to retrieve quota
+Step 5:	Define what happens when SendRequests is Clicked
+		Create a MessageQueue with admin's FormatName
+			MsgQ <- new MessageQueue(@"FormatName:DIRECT=TCP:192.168.6.68\Private$\MsgQ")
+		Send Message to MessageQueue
+			MsgQ.Send(Environment.MachineName + " has requested " + Quota_Requested + " pages ")
+		if success then
+			Show Message Sent to Admin DialogBox
+		else 	Show Cannot requests for Quota... try Again Later...
+Step 6:	End

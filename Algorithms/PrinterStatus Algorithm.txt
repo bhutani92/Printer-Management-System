@@ -1,0 +1,51 @@
+algorithm PrinterStatus
+input: Printer list and user lists connected within same network
+
+Step 1: Start
+Step 2: Initialize private variables
+Step 3: Import all relevant Dll Functions of WinAPI
+Step 4:	Define the Constructor
+Step 5: Create a new thread to call a method ThreadProc within OnStart procedure
+		Thread t1 <- new Thread(new ThreadStart(ThreadProc))
+		t1.Start()
+Step 6: Define the ThreadProc method
+		Implement a lock over this method
+		Update information such as Username MacAddress IPAddress to the database using a flag variable so that it gets updated only once
+		Define LocalPrintServer
+			myServer <- new LocalPrintServer()
+		Define PrintQueueCollection
+			myQueueCollection <- myServer.GetPrintQueues()
+		for each printer in myQueueCollection do
+			_mrEvent[i] <- new ManualResetEvent(false)
+			_waitHandle[i] <- null
+		for each PrintQueue in myQueueCollection do
+			if the PrintQueue name is not added to dictionary then
+				add PrintQueue Name to Dictionary
+				Make a connection to Printer using OpenPrinter method
+				if a valid handle is found then
+					Register the printer for a change notification
+					Capture the handle
+					Wait for change notification from the printer queue
+Step 6: Define the CallBack function which is called when a change notification occurs
+		ManualResetEvent _pnwcEvent <-(ManualResetEvent)state
+		pDictCount <- _handleDict[_pnwcEvent.Handle    
+          	PrintQueue myPrintQueue <- new PrintQueue(myServer, CountToPrinterNameDict[pDictCount], PrintSystemDesiredAccess.AdministratePrinter)
+           	myPrintQueue.Pause()
+           	ManagePrinter(myPrintQueue, myServer)
+		Reset the Event and wait for next Event
+Step 7: Define ManagePrinter method
+		Use Win32_Printer WMI Query to get Port Name of associated Printer
+		Use SNMP to derive NumberOfPages and Cartridge level from printer
+		for each job in PrintQueue do
+			Pause the job
+			Check for Valid Quota for that user
+			if Quota Available then
+				Print the Job
+			else Remove the Job from PrintQueue
+			Copy all Job Information to a separate XML file
+Step 8: Define the OnStop Procedure
+		Free all variables from memory
+Step 9: End	
+		
+					
+					

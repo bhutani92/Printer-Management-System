@@ -1,0 +1,309 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{474ED241-5412-44A1-8567-99C9230BF55E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NewPMS</RootNamespace>
+    <AssemblyName>NewPMS</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Microsoft Visual Basic 2005 Power Packs\3.0\Microsoft.VisualBasic.PowerPacks.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.8.3.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\MySQL\MySQL Connector Net 6.8.3\Assemblies\v2.0\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data.Entity, Version=6.8.3.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\MySQL\MySQL Connector Net 6.8.3\Assemblies\v2.0\MySql.Data.Entity.dll</HintPath>
+    </Reference>
+    <Reference Include="SnmpSharpNet">
+      <HintPath>..\packages\SnmpSharpNet.0.9.3\lib\SnmpSharpNet.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.DirectoryServices.AccountManagement" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Management.Instrumentation" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Printing" />
+    <Reference Include="System.Web.DataVisualization, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Microsoft Chart Controls\Assemblies\System.Web.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DataVisualization.Design, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Microsoft Chart Controls\Assemblies\System.Web.DataVisualization.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Windows.Forms.DataVisualization.Design, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Microsoft Chart Controls\Assemblies\System.Windows.Forms.DataVisualization.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddGroups.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddGroups.Designer.cs">
+      <DependentUpon>AddGroups.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddPrinter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddPrinter.Designer.cs">
+      <DependentUpon>AddPrinter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddPrintersToGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddPrintersToGroup.Designer.cs">
+      <DependentUpon>AddPrintersToGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddUser.Designer.cs">
+      <DependentUpon>AddUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddUsersToGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddUsersToGroup.Designer.cs">
+      <DependentUpon>AddUsersToGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminLogin.Designer.cs">
+      <DependentUpon>AdminLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BillingPerPrinter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BillingPerPrinter.Designer.cs">
+      <DependentUpon>BillingPerPrinter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BillingPerUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BillingPerUser.Designer.cs">
+      <DependentUpon>BillingPerUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChangeUserQuota.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangeUserQuota.Designer.cs">
+      <DependentUpon>ChangeUserQuota.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChangeGroupQuota.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangeGroupQuota.Designer.cs">
+      <DependentUpon>ChangeGroupQuota.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DashBoard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DashBoard.designer.cs">
+      <DependentUpon>DashBoard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeletePrinter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeletePrinter.Designer.cs">
+      <DependentUpon>DeletePrinter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteUser.Designer.cs">
+      <DependentUpon>DeleteUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Graph.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Graph.Designer.cs">
+      <DependentUpon>Graph.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JobsPerPrinter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JobsPerPrinter.Designer.cs">
+      <DependentUpon>JobsPerPrinter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JobsPeruser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JobsPeruser.Designer.cs">
+      <DependentUpon>JobsPeruser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PendingQuotaRequests.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PendingQuotaRequests.Designer.cs">
+      <DependentUpon>PendingQuotaRequests.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrinterManagementSystem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrinterManagementSystem.Designer.cs">
+      <DependentUpon>PrinterManagementSystem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Printers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Printers.Designer.cs">
+      <DependentUpon>Printers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WelCome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WelCome.Designer.cs">
+      <DependentUpon>WelCome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users.Designer.cs">
+      <DependentUpon>Users.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddGroups.resx">
+      <DependentUpon>AddGroups.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddPrinter.resx">
+      <DependentUpon>AddPrinter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddPrintersToGroup.resx">
+      <DependentUpon>AddPrintersToGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddUser.resx">
+      <DependentUpon>AddUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddUsersToGroup.resx">
+      <DependentUpon>AddUsersToGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminLogin.resx">
+      <DependentUpon>AdminLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BillingPerPrinter.resx">
+      <DependentUpon>BillingPerPrinter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BillingPerUser.resx">
+      <DependentUpon>BillingPerUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangeUserQuota.resx">
+      <DependentUpon>ChangeUserQuota.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangeGroupQuota.resx">
+      <DependentUpon>ChangeGroupQuota.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DashBoard.resx">
+      <DependentUpon>DashBoard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeletePrinter.resx">
+      <DependentUpon>DeletePrinter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteUser.resx">
+      <DependentUpon>DeleteUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Graph.resx">
+      <DependentUpon>Graph.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobsPerPrinter.resx">
+      <DependentUpon>JobsPerPrinter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobsPeruser.resx">
+      <DependentUpon>JobsPeruser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PendingQuotaRequests.resx">
+      <DependentUpon>PendingQuotaRequests.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrinterManagementSystem.resx">
+      <DependentUpon>PrinterManagementSystem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Printers.resx">
+      <DependentUpon>Printers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="WelCome.resx">
+      <DependentUpon>WelCome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users.resx">
+      <DependentUpon>Users.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

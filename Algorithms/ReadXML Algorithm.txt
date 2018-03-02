@@ -1,0 +1,22 @@
+algorithm ReadXML
+input:	Job information
+output:	writing all job information to database after specified interval
+
+Step 1: Start
+Step 2:	Use System.Timers to write the job information at regular intervals
+Step 3:	Iinitialize the private variables
+Step 4: Define the constructor
+Step 5: Define OnStart Procedure
+		Thread t1 <- new Thread(new ThreadStart(ThreadProc))
+		t1.Start()
+Step 6:	Define ThreadProc Procedure
+		timer.Elapsed +=: new ElapsedEventHandler(OnElapsedTime)
+	        timer.Interval <- 60000;
+        	timer.Enabled <- true;
+Step 7: Define EventHandler 
+		if File Exists then
+			Copy all job information to database
+		else Create the file and goto step 7
+Step 8:	Define the OnStop Procedure
+		time.Enabled <- false
+Step 9 :End
